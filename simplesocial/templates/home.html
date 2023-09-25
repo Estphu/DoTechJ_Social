@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titleBlock %}Social | Home{% endblock titleBlock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="px-4 py-5 my-lg-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">HI {{user.username}}</h1>
+</div>
+{% else %}
+<div class="px-4 py-5 my-lg-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">WELCOME</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">DoTech J presents you a platform that is made out of love. Love that is free, equal and diverse. Lets understand each other, connect with us by signing up.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-lg px-4 gap-3 myheader_btn">Learn more</button>
+      </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}
