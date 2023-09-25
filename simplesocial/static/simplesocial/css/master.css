@@ -1,0 +1,41 @@
+html, body {
+    min-height: 100%;
+}
+
+.mynav-li {
+    color: black;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 1px;
+}
+
+.active, .mynav-li:hover, .mynav-li:focus {
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 70px;
+    border-radius: 1px;
+}
+
+.mynav-loginbtn {
+    color: black;
+    border-color: black;
+}
+
+.mynav-loginbtn:hover, .mynav-loginbtn:active, .mynav-signupbtn:hover, .mynav-signupbtn:active {
+    color: white;
+    background-color: #4db748;
+    border-color: #4db748;
+}
+
+.mynav-signupbtn, .myheader_btn, .myheader_btn:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.myheader_btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black; 
+}
