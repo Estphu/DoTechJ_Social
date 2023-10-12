@@ -36,7 +36,7 @@
             <a href="{% url 'home' %}" class="nav-link px-2 mynav-li {% active_link 'home' 'active' strict=True %}">Home</a>
           </li>
           <li>
-            <a href="{% url "blog:post_list" %}" class="nav-link px-2 mynav-li {% active_link 'blog:post_list || blog:post_detail' 'active' strict=True %}">Blogs</a>
+            <a href="{% url "blog:post_list" %}" class="nav-link px-2 mynav-li {% active_link 'blog:post_list || blog:post_detail' 'active' %}">Blogs</a>
           </li>
           <li>
             <a href="{% url 'groups:all' %}" class="nav-link px-2 mynav-li {% active_link 'groups:all' 'active' strict=True %}">Groups</a>
@@ -52,11 +52,11 @@
               </div>
             </li>
             <li>
-              <a href="{% url 'blog:post_draft_list' %}" class="nav-link px-2 mynav-li {% active_link 'blog:post_draft_list' 'active' %}">Drafts</a>
+              <a href="{% url 'blog:post_draft_list' %}" class="nav-link px-2 mynav-li {% active_link 'blog:post_draft_list' 'active' strict=True %}">Drafts</a>
             </li>
           {% endif %}
           <li>
-            <a href="{% url 'about' %}" class="nav-link px-2 mynav-li {% active_link 'about' 'active' %}">FAQ</a>
+            <a href="{% url 'faq' %}" class="nav-link px-2 mynav-li {% active_link 'faq' 'active' %}">FAQ</a>
           </li>
           <li>
             <a href="{% url 'about' %}" class="nav-link px-2 mynav-li {% active_link 'about' 'active' %}">About</a>

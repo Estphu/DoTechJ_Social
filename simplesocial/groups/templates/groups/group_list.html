@@ -1,4 +1,5 @@
 {% extends "groups/group_base.html" %}
+{% load static %}
 
 {% block titleBlock %}Social | Groups{% endblock titleBlock %}
 
@@ -31,21 +32,24 @@
     <div class="list-group">
         {% for group in object_list %}
             <a href="{% url 'groups:single' slug=group.slug %}" class="lead text-decoration-none">
-                <h3 class="title list-group-item-heading g-head">{{group.name}}</h3>
-                <div class="list-group-item-text container-fluid g-desc">
-                    {{group.description_html|safe}}
-                    <div class="row">
-                        <div class="col-md-4">
-                            <span class="badge g-mem-badge">{{group.members.count}}</span>
-                            members: {{group.members.count}}
-                        </div>
-                        <div class="col-md-4">
-                            <span class="badge g-post-badge">{{group.posts.count}}</span>
-                            posts: {{group.posts.count}}
+                <div class="border m-3 px-2">
+                    <h3 class="title list-group-item-heading g-head">{{group.name}}</h3>
+                    <div class="list-group-item-text container-fluid g-desc">
+                        {{group.description_html|safe}}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span class="badge g-mem-badge">{{group.members.count}}</span>
+                                members
+                            </div>
+                            <div class="col-md-4">
+                                <span class="badge g-post-badge">{{group.posts.count}}</span>
+                                posts
+                            </div>
                         </div>
                     </div>
                 </div>
             </a>
+            
 
         {% endfor %}
     </div>
